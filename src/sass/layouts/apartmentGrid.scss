@@ -1,0 +1,16 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: #F6F6F6;
+    min-height: 829px; 
+    border-radius: 25px;
+    gap: 3rem;
+    padding: 2rem;
+    @media screen and (width <=768px) {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            background-color: white;
+        }
+}
