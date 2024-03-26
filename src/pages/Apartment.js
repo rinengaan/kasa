@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 /** SCSS */
-import '../sass/pages/apartmentPage.scss'
+import '../sass/pages/apartment.scss'
 
 /** Components */
 import ApartmentDesc from '../components/ApartmentDesc'
