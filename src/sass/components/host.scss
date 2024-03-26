@@ -1,0 +1,45 @@
+.apartment-host {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media screen and (width <=768px) {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__profile {
+        display: flex;
+        gap: 10px;
+        color: #FF6060;
+    }
+
+    &__badge {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+
+        @media screen and (width <=768px) {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    & h3 {
+        display: grid;
+        flex-grow: 1;
+        place-items: center;
+        width: 93px;
+        text-align: right;
+        justify-content: center;
+        font-weight: 500;
+
+        @media screen and (width <=768px) {
+            font-size: 12px;
+            font-weight: 500;
+            text-align: right;
+        }
+
+    }
+}

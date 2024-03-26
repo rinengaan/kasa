@@ -1,0 +1,18 @@
+.apartment-page-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: Montserrat, sans-serif;
+    text-align: left;
+}
+
+.dropdowns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @media screen and (width <=768px) {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,11 @@
+.apartment-desc__header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.apartment-desc__tags {
+    display: flex;
+    gap: 10px;
+}
