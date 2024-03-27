@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../sass/components/carrousel.scss'
-
+import arrowLeft from '../images/arrow_left.png'
+import arrowRight from '../images/arrow_right.png'
 function Carrousel({ urlArray }) {
     /** Current picture shown */
     const [currentPicture, setCurrentPicture] = useState(0)
@@ -32,17 +33,17 @@ function Carrousel({ urlArray }) {
                 alt='Apartment Cover'
             />
             <p className='counter'>
-                {currentPicture+1}/{urlArray.length}
+                {currentPicture + 1}/{urlArray.length}
             </p>
             <img
                 className='arrow arrow_left'
-                src='arrow_left.png'
+                src={arrowLeft}
                 alt='Arrow Left'
                 onClick={moveLeft}
             />
             <img
                 className='arrow arrow_right'
-                src='arrow_right.png'
+                src={arrowRight}
                 alt='Arrow Right'
                 onClick={moveRight}
             />

@@ -1,7 +1,6 @@
 /** React Modules */
-import { useLocation } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-
+import { useParams } from 'react-router-dom'
+import apartments from '../db.json'
 /** SCSS */
 import '../sass/pages/apartment.scss'
 
@@ -11,25 +10,12 @@ import Carrousel from '../components/Carrousel'
 import Dropdown from '../components/Dropdown'
 
 function Apartment() {
-
+    const { id } = useParams()
     /** Get current apartment data */
-    const location = useLocation()
-    const [currentApartment, setCurrentApartment] = useState(null)
-    useEffect(getApartmentDetails, [location.state])
-    function getApartmentDetails() {
-        fetch('db.json')
-            .then((res) => res.json())
-            .then((apartments) => {
-                const flat = apartments.find(
-                    (apartment) => apartment.id === location.state
-                )
-                setCurrentApartment(flat)
-            })
-    }
+    const currentApartment = apartments.find((apartment) => apartment.id === id)
 
     /** Add loader for low speed networks */
     if (currentApartment == null) return <div>Chargement...</div>
-
 
     return (
         <section className='apartment-page-layout'>
@@ -49,7 +35,7 @@ function Apartment() {
                 />
                 <Dropdown
                     category='Équipements'
-                    type="array"
+                    type='array'
                     content={currentApartment.equipments}
                 />
             </div>

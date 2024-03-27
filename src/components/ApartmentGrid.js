@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import apartments from '../db.json'
 
 /** SCSS */
 import '../sass/layouts/apartmentGrid.scss'
@@ -7,16 +7,6 @@ import '../sass/layouts/apartmentGrid.scss'
 import ApartmentCard from './ApartmentCard'
 
 function ApartmentGrid() {
-    /** Get DB from file */
-    const [apartments, setApartments] = useState([])
-    useEffect(getDB, [])
-
-    function getDB() {
-        fetch('db.json')
-            .then((res) => res.json())
-            .then((res) => setApartments(res))
-    }
-
     return (
         <section className='grid'>
             {apartments.map((apartment) => (
