@@ -14,7 +14,7 @@ function Apartment() {
     /** Get current apartment data */
     const currentApartment = apartments.find((apartment) => apartment.id === id)
 
-    /** Add loader for low speed networks */
+    /** redirect on incorrect url */
     if (currentApartment == null) return <Navigate to='/404' replace/>
 
     return (
