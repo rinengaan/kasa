@@ -1,0 +1,48 @@
+.error-page-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 139px;
+    font-family: Montserrat, sans-serif;
+    text-align: left;
+    color: #FF6060;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 139px;
+
+    @media screen and (width <=768px) {
+        gap: 113px;
+        margin-top: 113px;
+    }
+
+    & .error-number {
+        font-size: 288px;
+        font-weight: 700;
+
+        @media screen and (width <=768px) {
+            font-size: 96px;
+
+        }
+    }
+
+    & .error-desc {
+        font-size: 36px;
+        font-weight: 500;
+
+        @media screen and (width <=768px) {
+            font-size: 18px;
+
+        }
+    }
+
+    & .error-link {
+        margin-bottom: 139px;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: underline;
+
+        @media screen and (width <=768px) {
+            font-size: 14px;
+
+        }
+    }
+}

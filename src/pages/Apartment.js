@@ -1,5 +1,5 @@
 /** React Modules */
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import apartments from '../db.json'
 /** SCSS */
 import '../sass/pages/apartment.scss'
@@ -15,7 +15,7 @@ function Apartment() {
     const currentApartment = apartments.find((apartment) => apartment.id === id)
 
     /** Add loader for low speed networks */
-    if (currentApartment == null) return <div>Chargement...</div>
+    if (currentApartment == null) return <Navigate to='/404' replace/>
 
     return (
         <section className='apartment-page-layout'>

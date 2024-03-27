@@ -1,0 +1,20 @@
+.about-page-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: Montserrat, sans-serif;
+    text-align: left;
+}
+
+.about-dropdowns {
+    padding-inline: 8%;
+
+    & .dropdown__desc {
+        margin-bottom: 30px;
+        width: 100%;
+
+        @media screen and (width <=768px) {
+            margin-bottom: 20px;
+        }
+    }
+}
