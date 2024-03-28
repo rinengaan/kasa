@@ -24,31 +24,44 @@ function Carrousel({ urlArray }) {
         }
         setCurrentPicture(index)
     }
+    if (urlArray.length > 1) {
+        return (
+            <div className='carrousel'>
+                <img
+                    className='cover'
+                    src={urlArray[currentPicture]}
+                    alt='Apartment Cover'
+                />
 
-    return (
-        <div className='carrousel'>
-            <img
-                className='cover'
-                src={urlArray[currentPicture]}
-                alt='Apartment Cover'
-            />
-            <p className='counter'>
-                {currentPicture + 1}/{urlArray.length}
-            </p>
-            <img
-                className='arrow arrow_left'
-                src={arrowLeft}
-                alt='Arrow Left'
-                onClick={moveLeft}
-            />
-            <img
-                className='arrow arrow_right'
-                src={arrowRight}
-                alt='Arrow Right'
-                onClick={moveRight}
-            />
-        </div>
-    )
+                <p className='counter'>
+                    {currentPicture + 1}/{urlArray.length}
+                </p>
+                <img
+                    className='arrow arrow_left'
+                    src={arrowLeft}
+                    alt='Arrow Left'
+                    onClick={moveLeft}
+                />
+                <img
+                    className='arrow arrow_right'
+                    src={arrowRight}
+                    alt='Arrow Right'
+                    onClick={moveRight}
+                />
+            </div>
+        )
+    } else {
+        return (
+            <div className='carrousel'>
+                <img
+                    className='cover'
+                    src={urlArray[currentPicture]}
+                    alt='Apartment Cover'
+                />
+            </div>
+        )
+    }
+    
 }
 
 export default Carrousel
