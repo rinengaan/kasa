@@ -1,11 +1,12 @@
 import '../sass/components/banner.scss'
 
-const Banner = () => {
+const Banner = ({src, alt, text, text2}) => {
     return (
         <div className='banner-text'>
-            <img src='crique.png' alt='crique avec reliefs' />
+            <img src={src} alt={alt} />
             <h1 className='banner-text__title'>
-                <span>Chez vous,&nbsp;</span>partout et ailleurs
+                <span>{text}</span>
+                <span>{text2}</span>
             </h1>
         </div>
     )

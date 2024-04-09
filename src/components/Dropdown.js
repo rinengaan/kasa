@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../sass/components/dropdown.scss'
 
-function Dropdown({ type, category, content }) {
+function Dropdown({ category, content }) {
     const [isContentShown, setIsContentShown] = useState(false)
 
     const showContent = () => {
@@ -21,18 +21,7 @@ function Dropdown({ type, category, content }) {
                     onClick={showContent}
                 ></i>
             </div>
-            {isContentShown &&
-                (type === 'array' ? (
-                    content.map((element) => {
-                        return (
-                            <p key={element} className='list-content'>
-                                {element}
-                            </p>
-                        )
-                    })
-                ) : (
-                    <p className='list-content'>{content}</p>
-                ))}
+            {isContentShown && <p className='list-content'>{content}</p>}
         </div>
     )
 }
