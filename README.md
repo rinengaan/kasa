@@ -1,4 +1,4 @@
-# Project 11 - Kasa  14/12/2021
+# Project 11 - Kasa
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## 1-Description
